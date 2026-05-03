@@ -1,4 +1,7 @@
 import React from 'react'
+
+import Reviews from './Reviews/Reviews.jsx'
+
 import './App.css'
 
 export default function App() {
@@ -6,7 +9,7 @@ export default function App() {
 		<div className='App'>
 			<div className='header'>
 				{/* header */}
-				<div className="container">
+				<div className="container header__container">
 					<h1 className='header__title'>GSM-CENT</h1>
 				<div className='header__kontakt'>
 					<a href='tel:+48 697 020 972'>+48 697 020 972</a>
@@ -17,7 +20,7 @@ export default function App() {
 			{/* header */}
 			<div className='hero'>
 				{/* hero */}
-				<div className="hero__container">
+				<div className="container hero__container">
 					<h2 className='hero__title'>SERWIS GSM-CENT</h2>
 				<p className='hero__discription'>
 					Serwis telefonów, komputerów, laptopów,nawigacji oraz konsoli.
@@ -33,7 +36,7 @@ export default function App() {
 				{' '}
 				{/* about */}
 				<h2 className='about__title'>W CZYM TKWI NASZA MOC?</h2>
-				<div className='about__container'>
+				<div className='container about__container'>
 					<div className='about__content'>
 						{/* <img src="" alt="" /> */}
 						<h3 className='about__content--title'>
@@ -66,7 +69,7 @@ export default function App() {
 			{/* whatwedo */}
 			<div className='whatwedo'>
 				{' '}
-				<div className="whatwedo__container">
+				<div className="container whatwedo__container">
 									<h2 className='whatwedo__title'>KIM JESTEŚMY</h2>
 				<p className='whatwedo__discription'>
 					Serwis telefonów, komputerów, laptopów,nawigacji oraz konsoli.
@@ -78,6 +81,7 @@ export default function App() {
 				</div>
 			</div>
 			{/* whatwedo */}
+			<Reviews />
       <div className="footer">
         <div className="footer__container">
           <h2 className="footer__title">GSM-CENT</h2>
