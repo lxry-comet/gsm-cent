@@ -1,12 +1,12 @@
 {
-  "name": "gsm-cent-beta",
-  "homepage": "https://lxry-comet.github.io/gsm-cent-beta",
+  "name": "gsm-cent",
+  "homepage": "https://lxry-comet.github.io/gsm-cent",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/gsm-cent-beta/",
+    "build": "vite build --base=/gsm-cent/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
