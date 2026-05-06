@@ -22,6 +22,7 @@ body {
 	font-family: 'SF Pro', sans-serif;
 	/* background-color: var(--black); */
 	color: var(--white);
+	background-color: var(--black);
 }
 
 h2 {
@@ -42,10 +43,10 @@ a {
 	color: inherit;
 	transition: 0.3s;
 }
-a:hover{
+a:hover {
 	color: var(--orange);
 }
-a.numberButton{
+a.numberButton {
 	display: inline-block;
 	background-color: var(--orange);
 	color: var(--white);
@@ -55,20 +56,18 @@ a.numberButton{
 	margin-top: 20px;
 	transition: transform 0.2s;
 }
-a.numberButton:hover{
+a.numberButton:hover {
 	transform: scale(1.05);
 }
-.container{
+.container {
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 20px 10%;
-
 }
 /* HEADER */
 .header {
-
 	background-color: var(--black);
 	color: var(--white);
 }
@@ -99,7 +98,6 @@ a.numberButton:hover{
 	background-color: var(--white);
 	color: var(--black);
 }
-
 .about__container {
 	display: flex;
 	align-items: center;
@@ -108,7 +106,7 @@ a.numberButton:hover{
 	max-width: 1200px;
 	margin: 0 auto;
 }
-.about__content--description{
+.about__content--description {
 	width: 290px;
 }
 .header,
@@ -117,12 +115,24 @@ a.numberButton:hover{
 	background-color: var(--black);
 	color: var(--white);
 }
-
 .hero,
-.whatwedo{
+.whatwedo {
 	text-align: center;
 }
-
+.hero__slogan{
+	width: 125px;
+	margin: 0 auto;
+}
+.hero__slogan::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: var(--orange);
+	margin-top: 10px;
+	border-radius: 5px;
+	margin: 0 auto;
+}
 .hero__image img,
 .about__image img {
 	width: 100%;
@@ -130,7 +140,6 @@ a.numberButton:hover{
 	border-radius: 15px;
 	object-fit: cover;
 }
-
 /* PRZYCISKI */
 .btn-orange {
 	display: inline-flex;
@@ -144,7 +153,6 @@ a.numberButton:hover{
 	margin-top: 20px;
 	transition: transform 0.2s;
 }
-
 .btn-orange:hover {
 	transform: scale(1.05);
 }
@@ -211,9 +219,20 @@ a.numberButton:hover{
 		display: flex;
 		flex-direction: column;
 	}
-
+	.header__kontakt {
+		flex-direction: column;
+		gap: 10px;
+	}
 	.header {
 		flex-direction: column;
 		gap: 15px;
+	}
+}
+@media (max-width: 480px) {
+	h1 {
+		font-size: 1.2rem;
+	}
+	a.numberButton {
+		padding: 15px 60px;
 	}
 }

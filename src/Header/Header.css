@@ -1,0 +1,15 @@
+/* HEADER */
+.header {
+	background-color: var(--black);
+	color: var(--white);
+}
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__kontakt {
+	display: flex;
+	gap: 30px;
+	font-size: 0.9rem;
+}
