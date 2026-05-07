@@ -319,4 +319,18 @@ a.numberButton:hover {
 		height: 200px;
 		padding: 20px;
 	}
+	.reviews__arrow{
+		display: none;
+		
+	}
+}
+@media (max-width: 320px) {
+	.review-card {
+		min-width: calc(80vw - 20px); /* Полная ширина экрана */
+		height: 200px;
+		padding: 20px;
+	}
+	.review-card{
+		min-width: 300px; 
+	}
 }
