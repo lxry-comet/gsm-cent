@@ -80,7 +80,7 @@ const Reviews = () => {
       </div>
 
       {/* Kropki nawigacyjne */}
-      <div className="reviews__dots">
+      {/* <div className="reviews__dots">
         {reviewData.map((_, index) => (
           <span
             key={index}
@@ -90,7 +90,7 @@ const Reviews = () => {
             tabIndex={0}
           ></span>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

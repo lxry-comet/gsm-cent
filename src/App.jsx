@@ -2,7 +2,7 @@ import React from 'react'
 
 import Header from './Header/Header.jsx'
 import Hero from './Hero/Hero.jsx'
-import Whatwedo from './Whatwedo/Whatwedo.jsx'
+import Servis from './Servis/Servis.jsx'
 import About from './About/About.jsx'
 import Reviews from './Reviews/Reviews.jsx'
 import Footer from './Footer/Footer.jsx'
@@ -15,7 +15,7 @@ export default function App() {
 			<Header />
 			<Hero />
 			<About />
-			<Whatwedo />
+			<Servis />
 			<Reviews />
 			<Footer/>
 		</div>

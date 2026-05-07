@@ -2,8 +2,8 @@
 	padding: var(--section-padding);
 	text-align: center;
 	background-color: var(--white);
-	max-width: 1200px;
 	margin: 0 auto;
+	max-width: 100%;
 	position: relative;
 }
 
@@ -18,19 +18,40 @@
 	display: flex;
 	align-items: center;
 	position: relative;
+	justify-content: center;
 	gap: 10px;
+
 }
 
 /* OKNO WIDOKU (Viewport slidera) */
 .reviews__container {
-	display: flex;
-	gap: 20px;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory; /* Magia slidera */
-	scroll-behavior: smooth;
-	padding: 20px 0;
-	-ms-overflow-style: none; /* Ukrycie paska przewijania IE/Edge */
-	scrollbar-width: none; /* Ukrycie paska przewijania Firefox */
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  
+  /* Ukrycie paska przewijania */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* EFEKT PRZEZROCZYSTYCH ŚCIANEK */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 3%,
+    black 97%,
+    transparent
+  );
 }
 
 .reviews__container::-webkit-scrollbar {
@@ -98,34 +119,3 @@
 /* .reviews__arrow--right {
   color: var(--black); 
 } */
-
-/* STOPKA */
-.footer {
-	background-color: var(--black);
-	color: var(--white);
-	padding: 50px 10% 20px;
-}
-
-@media (max-width: 768px) {
-	.reviews__container {
-		gap: 15px;
-		padding: 20px 10px;
-	}
-
-	.review-card {
-		min-width: calc(55vw - 40px); /* Одна карта на весь экран минус padding */
-	}
-}
-
-@media (max-width: 480px) {
-	.reviews__container {
-		gap: 5px;
-		padding: 20px 10px;
-	}
-
-	.review-card {
-		min-width: calc(80vw - 20px); /* Полная ширина экрана */
-		height: 200px;
-		padding: 20px;
-	}
-}
