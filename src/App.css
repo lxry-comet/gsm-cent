@@ -31,6 +31,9 @@ h2 {
 	text-transform: uppercase;
 	font-weight: 800;
 }
+span{
+	color: var(--orange);
+}
 
 p {
 	margin: 0;
@@ -76,6 +79,14 @@ a.numberButton:hover {
 	justify-content: space-between;
 	align-items: center;
 }
+.header__title:hover{
+	color: var(--white);
+}
+.header__title{
+	margin-bottom: 0;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
 .header__kontakt {
 	display: flex;
 	gap: 30px;
@@ -83,10 +94,25 @@ a.numberButton:hover {
 }
 
 /* HERO & SEKCJE CIEMNE */
+.hero{
+  background-color: var(--black);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px 600px;
+  padding: 200px 100px;
+}
 .hero,
 .about,
 .servis {
 	padding: var(--section-padding);
+}
+.header__title--container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header__title--after, .footer__title--after{
+	color: var(--gray);
 }
 
 .about {
@@ -118,9 +144,18 @@ a.numberButton:hover {
 .servis {
 	text-align: center;
 }
+.hero__discription{
+	font-size: 1.5rem;
+	color: var(--white);
+	margin-bottom: 20px;
+}
 .hero__slogan{
-	width: 125px;
+	width: 250px;
 	margin: 0 auto;
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: var(--white);
 }
 .hero__slogan::after {
 	content: '';
@@ -132,12 +167,15 @@ a.numberButton:hover {
 	border-radius: 5px;
 	margin: 0 auto;
 }
-.hero__image img,
+
 .about__image img {
 	width: 100%;
 	max-width: 450px;
 	border-radius: 15px;
 	object-fit: cover;
+}
+.hero__title{
+	margin-bottom: 50px;
 }
 /* PRZYCISKI */
 .btn-orange {
@@ -258,7 +296,9 @@ a.numberButton:hover {
 	justify-content: space-between;
 	margin-top: 36px;
 }
-
+.footer__whenopenned, .footer__contact--tel{
+	font-size: 1rem;
+}
 .footer__content--contact {
 	display: flex;
 	flex-direction: column;
@@ -303,8 +343,11 @@ a.numberButton:hover {
 	}
 }
 @media (max-width: 480px) {
-	h1 {
+	h1, h2 {
 		font-size: 1.2rem;
+	}
+	h3{
+		font-size: 1rem;
 	}
 	a.numberButton {
 		padding: 15px 60px;
@@ -325,6 +368,7 @@ a.numberButton:hover {
 	}
 }
 @media (max-width: 320px) {
+
 	.review-card {
 		min-width: calc(80vw - 20px); /* Полная ширина экрана */
 		height: 200px;

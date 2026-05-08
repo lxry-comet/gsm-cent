@@ -8,6 +8,7 @@ import Reviews from './Reviews/Reviews.jsx'
 import Footer from './Footer/Footer.jsx'
 
 import './App.css'
+import Gallery from './Gallery/Gallery.jsx'
 
 export default function App() {
 	return (
@@ -15,8 +16,9 @@ export default function App() {
 			<Header />
 			<Hero />
 			<About />
-			<Servis />
+			{/* <Gallery/> */}
 			<Reviews />
+			<Servis />
 			<Footer/>
 		</div>
 	)

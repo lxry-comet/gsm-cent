@@ -1,8 +1,30 @@
+import { useEffect, useState } from 'react'
+import images from '../json/images.json'
+
 export default function Hero() {
+	const [currentIndex, setCurrentIndex] = useState(0)
+	const photoArray = images.actualImages
+
+	// ← Автоматическое переключение каждые 5 сек
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentIndex((prev) => (prev + 1) % photoArray.length)
+		}, 5000)
+		return () => clearInterval(interval)
+	}, [photoArray.length])
+
 	return (
-		<section className='hero'>
+		<section
+			className='hero'
+			style={{
+				backgroundImage: `linear-gradient(rgba(27, 27, 29, 0.4), rgba(15, 15, 18, 0.6)), url(${photoArray[currentIndex]})`,
+			}}
+		>
+			<div className='hero__overlay'></div>
 			<div className='container hero__container'>
-				<h2 className='hero__title'>SERWIS GSM-CENT</h2>
+				<h2 className='hero__title'>
+					SERWIS <span>apple</span> GSM-CENT
+				</h2>
 				<p className='hero__discription'>
 					Serwis telefonów, komputerów, laptopów,nawigacji oraz konsoli.
 				</p>
@@ -12,5 +34,5 @@ export default function Hero() {
 				</a>
 			</div>
 		</section>
-	);
+	)
 }

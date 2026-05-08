@@ -8,10 +8,9 @@
 }
 
 .reviews__title {
-	font-family: sans-serif;
-	font-weight: 800;
 	margin-bottom: 40px;
 	letter-spacing: 1px;
+	color: var(--black);
 }
 
 .reviews__wrapper {
