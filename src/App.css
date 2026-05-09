@@ -111,7 +111,7 @@ a.numberButton:hover {
 	flex-direction: column;
 	align-items: center;
 }
-.header__title--after, .footer__title--after{
+.header__title--after{
 	color: var(--gray);
 }
 
@@ -278,49 +278,19 @@ a.numberButton:hover {
 }
 
 .servis button:active {
-  transform: scale(0.98); /* Opcjonalnie: lekki efekt kliknięcia */
+  transform: scale(0.98); 
 }
 
 /* Styl dla placeholder (opcjonalnie) */
 .servis textarea::placeholder {
   color: var(--gray);
 }
-/* STOPKA */
-.footer {
-	background-color: var(--black);
-	color: var(--white);
-	padding: 50px 10% 20px;
-}
-.footer__container--elemetns {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 36px;
-}
-.footer__whenopenned, .footer__contact--tel{
-	font-size: 1rem;
-}
-.footer__content--contact {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-	font-size: 0.85rem;
-}
-.map-placeholder img {
-	width: 100%;
-	border-radius: 8px;
-}
-.footer__text {
-	text-align: center;
-	font-size: 0.7rem;
-	padding-top: 20px;
-	color: var(--gray);
-}
+
 
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
 	.hero,
-	.about__container,
-	.footer__container--elemetns {
+	.about__container{
 		grid-template-columns: 1fr;
 		display: flex;
 		flex-direction: column;
