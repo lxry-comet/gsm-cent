@@ -1,4 +1,12 @@
 import './Footer.css'
+import { FaPhone } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { IoTime } from "react-icons/io5";
+
+// social_media
+import { FaFacebook } from "react-icons/fa";
+import { RiWhatsappFill } from "react-icons/ri";
 
 export default function Footer() {
 	return (
@@ -11,23 +19,24 @@ export default function Footer() {
 
 				<div className='footer__container--elemetns'>
 					<div className='footer__content--contact'>
+						
 						<a className='footer__contact--tel' href='tel:+48 697 020 972'>
-							+48 697 020 972
+							<FaPhone /> +48 697 020 972
 						</a>
 						<a
 							className='footer__contact--email'
 							href='mailto:gsmcentserwis@gmail.com'
 						>
-							gsmcentserwis@gmail.com
+							<IoIosMail /> gsmcentserwis@gmail.com
 						</a>
 						<a
 							className='footer__contact--address'
 							href='https://maps.app.goo.gl/Rd7J6YCVA3ewDgLV9'
 						>
-							Bolesława Krzywoustego 54/U4, 70-315 Szczecin
+							<FaMapMarkerAlt /> Bolesława Krzywoustego 54/U4, 70-315 Szczecin
 						</a>
 						<p className='footer__whenopenned'>
-							Pon-Pt: 09:00 - 17:00 | Sob: Na telefon
+							<IoTime /> Pon-Pt: 09:00 - 17:00 | Sob: Na telefon
 						</p>
 					</div>
 					<div className='footer__content'>
@@ -38,10 +47,10 @@ export default function Footer() {
 								href='https://www.facebook.com/gsmceent/directory_contact_info'
 								className='facebook'
 							>
-								F
+								<FaFacebook size='40'/>
 							</a>
 							<a href='https://wa.me/48697020972' className='whatsapp'>
-								W
+								<RiWhatsappFill size='40' />
 							</a>
 						</div>
 					</div>

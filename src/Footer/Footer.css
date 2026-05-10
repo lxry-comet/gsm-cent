@@ -44,11 +44,16 @@
 
 .footer__contact--tel,
 .footer__contact--email,
-.footer__contact--address {
+.footer__contact--address,
+.footer__whenopenned {
 	color: var(--white);
 	text-decoration: none;
 	transition: color 0.3s;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
+
 
 
 .footer__media,

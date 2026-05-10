@@ -1,0 +1,41 @@
+{
+  "uslugi_serwisowe": [
+    {
+      "kategoria": "Naprawy Sprzętowe",
+      "lista": [
+        "Naprawa głośników",
+        "Naprawa mikrofonów/głośników",
+        "Naprawa obudów telefonów",
+        "Naprawa po zalaniu",
+        "Naprawa portów ładowania",
+        "Naprawa przycisków",
+        "Naprawa przycisków zasilania",
+        "Naprawa tabletów",
+        "Naprawy aparatów",
+        "Wymiana baterii",
+        "Wymiana aparatu fotograficznego i szybki aparatu",
+        "Wymiana głośników, mikrofonów, portów USB, gniazd ładowania, porty SIM",
+        "Wymiana taśm, kabla antenowego GSM"
+      ]
+    },
+    {
+      "kategoria": "Oprogramowanie i Dane",
+      "lista": [
+        "Problemy z oprogramowaniem",
+        "Skany diagnostyczne",
+        "Instalacja programów i rozszerzeń potrzebnych do codziennej pracy (Adobe)",
+        "Naprawa i aktualizacja oprogramowania",
+        "Odzyskiwanie numeru IMEI",
+        "Odzyskiwanie oraz przenoszenie danych",
+        "Usuwanie wirusów, trojanów, programów szpiegujących i wyłudzających tożsamość"
+      ]
+    },
+    {
+      "kategoria": "Usługi Dodatkowe",
+      "lista": [
+        "Prowadzimy skup/sprzedaż nowych i używanych telefonów/smartfonów",
+        "Przycinanie karty SIM"
+      ]
+    }
+  ]
+}

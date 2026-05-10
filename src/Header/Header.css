@@ -1,15 +1,207 @@
-/* HEADER */
+/* --- FUNDAMENTY I STRUKTURA --- */
 .header {
-	background-color: var(--black);
-	color: var(--white);
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .header__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+/* --- LOGOTYP --- */
+.header__title--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.header__title--after {
+  color: var(--gray);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* --- NAWIGACJA DESKTOP (PRZYCISKI) --- */
+.header__nav {
+  display: flex;
+  gap: 25px;
+}
+
+.header__nav-link-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+.header__nav-link-btn:hover {
+  color: var(--orange);
+}
+
+/* --- KONTAKT (DESKTOP) --- */
 .header__kontakt {
-	display: flex;
-	gap: 30px;
-	font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 0.9rem;
+}
+
+.header__kontakt--tel,
+.header__kontakt--email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header__kontakt--tel:hover,
+.header__kontakt--email:hover {
+  color: var(--orange);
+}
+
+/* --- BURGER BUTTON --- */
+.header__burger {
+  display: none; /* Pokazywany tylko na mobile */
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* --- MODAL WINDOW --- */
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal__window {
+  background-color: var(--black);
+  padding: 40px 20px;
+  border-radius: 12px;
+  position: relative;
+  width: 90%;
+  max-width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal__link-main {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+.modal__link-main:hover {
+  color: var(--orange);
+}
+
+/* --- LISTY ROZWIJANE W MODALU --- */
+.modal__brands-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__brands-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal__brands-list a {
+  padding: 12px;
+  display: block;
+  font-size: 0.95rem;
+  color: var(--gray);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.modal__brands-list a:hover {
+  color: var(--orange);
+  background: rgba(255, 255, 255, 0.05);
+  padding-left: 18px;
+}
+
+/* Scrollbar dla listy */
+.modal__brands-list::-webkit-scrollbar {
+  width: 4px;
+}
+.modal__brands-list::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+/* --- RESPONSIVNESS --- */
+@media (max-width: 992px) {
+  .header__kontakt {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__nav, 
+  .header__kontakt {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+  }
 }

@@ -69,29 +69,6 @@ a.numberButton:hover {
 	overflow: hidden;
 	padding: 20px 25px;
 }
-/* HEADER */
-.header {
-	background-color: var(--black);
-	color: var(--white);
-}
-.header__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.header__title:hover{
-	color: var(--white);
-}
-.header__title{
-	margin-bottom: 0;
-	font-weight: 700;
-	font-size: 1.5rem;
-}
-.header__kontakt {
-	display: flex;
-	gap: 30px;
-	font-size: 0.9rem;
-}
 
 /* HERO & SEKCJE CIEMNE */
 .hero{
@@ -106,14 +83,7 @@ a.numberButton:hover {
 .servis {
 	padding: var(--section-padding);
 }
-.header__title--container{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.header__title--after{
-	color: var(--gray);
-}
+
 
 .about {
 	display: flex;
@@ -295,14 +265,7 @@ a.numberButton:hover {
 		display: flex;
 		flex-direction: column;
 	}
-	.header__kontakt {
-		flex-direction: column;
-		gap: 10px;
-	}
-	.header {
-		flex-direction: column;
-		gap: 15px;
-	}
+
 	.reviews__container {
 		gap: 15px;
 		padding: 20px 10px;
