@@ -24,8 +24,7 @@ export default function About() {
 					{/* <img src="" alt="" /> */}
 					<h3 className='about__content--title'>Jakości</h3>
 					<p className='about__content--description'>
-						Na każdą naprawę udzielamy pisemnej gwarancji. Działamy legalnie i
-						przejrzyście – w naszym lombardzie Twoje przedmioty są bezpieczne.
+						Stawiamy na sprawdzone części i rygorystyczne testy po każdej naprawie.Naszą mocą jest trwałość, dzięki której nasi klienci wracają do nas tylko po to, by serwisować kolejny model, a nie reklamować poprzednią usługę.
 					</p>
 				</div>
 			</div>

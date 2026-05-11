@@ -22,7 +22,6 @@ body {
 	padding-top: 85px;
 	margin: 0;
 	font-family: 'SF Pro', sans-serif;
-	/* background-color: var(--black); */
 	color: var(--white);
 	background-color: var(--black);
 }
@@ -105,25 +104,6 @@ a.numberButton:hover {
 	background-color: var(--black);
 	color: var(--white);
 }
-/* PRZYCISKI */
-/* .btn-orange {
-	display: inline-flex;
-	align-items: center;
-	gap: 10px;
-	background-color: var(--orange);
-	color: var(--white);
-	padding: 12px 35px;
-	border-radius: 30px;
-	font-weight: bold;
-	margin-top: 20px;
-	transition: transform 0.2s;
-}
-.btn-orange:hover {
-	transform: scale(1.05);
-} */
-
-/* SEKCJA ZALETY (W czym tkwi nasza moc?) */
-
 
 .feature-item {
 	display: flex;

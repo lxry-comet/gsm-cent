@@ -19,7 +19,7 @@ export default function Hero() {
 		<section
 			className='hero'
 			style={{
-				backgroundImage: `linear-gradient(rgba(27, 27, 29, 0.4), rgba(15, 15, 18, 0.6)), url(${photoArray[currentIndex]})`,
+				backgroundImage: `linear-gradient(rgba(27, 27, 29, 0.8), rgba(16, 16, 18, 0.6)), url(${photoArray[currentIndex]})`,
 			}}
 		>
 			<div className='hero__overlay'></div>
