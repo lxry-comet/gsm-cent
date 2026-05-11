@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import images from '../json/images.json'
 
+import './Hero.css'
+import { FaPhone } from 'react-icons/fa6'
+
 export default function Hero() {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const photoArray = images.actualImages
 
-	// ← Автоматическое переключение каждые 5 сек
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setCurrentIndex((prev) => (prev + 1) % photoArray.length)
@@ -30,7 +32,7 @@ export default function Hero() {
 				</p>
 				<p className='hero__slogan'>MAMY TĘ MOC!</p>
 				<a className='numberButton' href='tel:+48 697 020 972'>
-					+48 697 020 972
+					<FaPhone style={{display: 'block'}}/> +48 697 020 972
 				</a>
 			</div>
 		</section>

@@ -18,8 +18,6 @@ export default function Header() {
     setShowBrands(false)
     setShowServices(false)
   }
-
-  // Funkcja do otwierania konkretnej sekcji w modalu z poziomu paska Header
   const openSection = (section) => {
     setIsModalOpen(true);
     if (section === 'brands') {
@@ -38,8 +36,6 @@ export default function Header() {
           <a href='#' className='header__title'>GSM-CENT</a>
           <span className='header__title--after'>IPHONE SZCZECIN</span>
         </div>
-
-        {/* POPRAWIONA NAWIGACJA DESKTOPOWA */}
         <nav className='header__nav'>
           <button 
             className='header__nav-link-btn' 
@@ -56,7 +52,12 @@ export default function Header() {
         </nav>
 
         <div className='header__kontakt'>
-          {/* ... linki do tel i mail ... */}
+          <a className='header__kontakt--tel' href='tel:+48 697 020 972'>
+            <FaPhone /> +48 697 020 972
+          </a>
+          <a className='header__kontakt--email' href='mailto:gsmcentserwis@gmail.com'>
+            <IoIosMail /> gsmcentserwis@gmail.com
+          </a>
         </div>
 
         <button className='header__burger' onClick={toggleModal}>
@@ -64,8 +65,75 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Modal Window (zostaje bez zmian, upewnij się tylko że brandsData.brands istnieje w Twoim JSONie) */}
-      {/* ... kod modala ... */}
+      {isModalOpen && (
+  <div className='modal__overlay' onClick={toggleModal}>
+    <div className='modal__window' onClick={e => e.stopPropagation()}>
+      
+      {/* Przycisk zamknięcia */}
+      <button className='modal__close' onClick={toggleModal}>
+        <FaTimes />
+      </button>
+
+      <nav className='modal__nav'>
+        
+        {/* SEKCJA MODELE */}
+        <div className='modal__dropdown'>
+          <a 
+            href='#' 
+            onClick={(e) => { e.preventDefault(); setShowBrands(!showBrands); setShowServices(false); }} 
+            className='modal__link-main'
+          >
+            Modele telefonów {showBrands ? <FaChevronUp /> : <FaChevronDown />}
+          </a>
+
+          {showBrands && (
+            <ul className='modal__brands-list'>
+              {brandsData.brands.map(brand => (
+                <li key={brand.id}>
+                  <a href={`#${brand.brand.toLowerCase()}`} onClick={toggleModal}>
+                    {brand.brand} {brand.model_series || ''}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className='modal__dropdown'>
+          <a 
+            href='#' 
+            onClick={(e) => { e.preventDefault(); setShowServices(!showServices); setShowBrands(false); }} 
+            className='modal__link-main'
+          >
+            Usługi {showServices ? <FaChevronUp /> : <FaChevronDown />}
+          </a>
+          
+          {showServices && (
+            <ul className='modal__brands-list modal__services-list'>
+              {servicesData.uslugi_serwisowe.map((kat, index) => (
+                <li key={index} className='modal__service-category'>
+                  <strong className="modal__service-title">
+                    {kat.kategoria}
+                  </strong>
+                  <ul className="modal__service-sublist">
+                    {kat.lista.map((usluga, i) => (
+                      <li key={i} className="modal__service-item">
+                        {usluga}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className="modal__mobile-contact">
+            <a href='tel:+48 697 020 972'><FaPhone /> +48 697 020 972</a>
+            <a href='mailto:gsmcentserwis@gmail.com'><IoIosMail /> gsmcentserwis@gmail.com</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+)}
     </header>
   )
 }

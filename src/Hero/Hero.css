@@ -1,0 +1,28 @@
+.hero__discription{
+	font-size: 1.5rem;
+	color: var(--white);
+	margin-bottom: 20px;
+}
+.hero__slogan{
+	width: 250px;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: var(--white);
+}
+.hero__slogan::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: var(--orange);
+	margin-top: 10px;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+
+.hero__title{
+	margin-bottom: 50px;
+}

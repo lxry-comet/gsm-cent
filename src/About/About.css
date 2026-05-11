@@ -1,0 +1,33 @@
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 30px;
+	background-color: var(--white);
+	color: var(--black);
+}
+.about__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+	margin: 0 auto;
+}
+.about__content--description {
+	width: 290px;
+}
+.about__image img {
+	width: 100%;
+	max-width: 450px;
+	border-radius: 15px;
+	object-fit: cover;
+}
+.about__container {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+.about__title {
+	text-align: center;
+}

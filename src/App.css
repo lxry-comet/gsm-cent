@@ -17,7 +17,9 @@
 	box-sizing: border-box;
 }
 
+
 body {
+	padding-top: 85px;
 	margin: 0;
 	font-family: 'SF Pro', sans-serif;
 	/* background-color: var(--black); */
@@ -50,7 +52,11 @@ a:hover {
 	color: var(--orange);
 }
 a.numberButton {
-	display: inline-block;
+	display: inline-flex;
+  align-items: center;  
+  justify-content: center;
+  gap: 10px;               
+
 	background-color: var(--orange);
 	color: var(--white);
 	padding: 20px 80px;
@@ -84,71 +90,18 @@ a.numberButton:hover {
 	padding: var(--section-padding);
 }
 
-
-.about {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	gap: 30px;
-	background-color: var(--white);
-	color: var(--black);
-}
-.about__container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 50px;
-	margin: 0 auto;
-}
-.about__content--description {
-	width: 290px;
-}
 .header,
-.hero,
-.servis {
+.hero,.servis {
+	text-align: center;
+}
+
+
+.hero,.servis {
 	background-color: var(--black);
 	color: var(--white);
 }
-.hero,
-.servis {
-	text-align: center;
-}
-.hero__discription{
-	font-size: 1.5rem;
-	color: var(--white);
-	margin-bottom: 20px;
-}
-.hero__slogan{
-	width: 250px;
-	margin: 0 auto;
-	font-size: 1.5rem;
-	font-weight: 700;
-	margin-bottom: 20px;
-	color: var(--white);
-}
-.hero__slogan::after {
-	content: '';
-	display: block;
-	width: 100%;
-	height: 4px;
-	background-color: var(--orange);
-	margin-top: 10px;
-	border-radius: 5px;
-	margin: 0 auto;
-}
-
-.about__image img {
-	width: 100%;
-	max-width: 450px;
-	border-radius: 15px;
-	object-fit: cover;
-}
-.hero__title{
-	margin-bottom: 50px;
-}
 /* PRZYCISKI */
-.btn-orange {
+/* .btn-orange {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
@@ -162,13 +115,10 @@ a.numberButton:hover {
 }
 .btn-orange:hover {
 	transform: scale(1.05);
-}
+} */
 
 /* SEKCJA ZALETY (W czym tkwi nasza moc?) */
-.servis {
-	color: var(--white);
-	padding: var(--section-padding);
-}
+
 
 .feature-item {
 	display: flex;
@@ -182,79 +132,8 @@ a.numberButton:hover {
 	flex-shrink: 0;
 }
 
-/* SEKCJA O NAS (KIM JESTEŚMY) */
-.about__container {
-	display: flex;
-	align-items: center;
-	gap: 50px;
-}
-.about__title {
-	text-align: center;
-}
 
 
-.servis__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.servis textarea {
-  /* Kolor tekstu i tła */
-  color: var(--white);
-  background-color: transparent; 
-  
-  /* Obramowanie */
-  border: 4px solid var(--orange);
-  
-  /* Statyczny rozmiar */
-  width: 100%;
-  max-width: 500px; /* Możesz dostosować do potrzeb */
-  height: 200px;
-  resize: none; 
-  
-  padding: 15px;
-  outline: none;
-	border-radius: 10px;
-}
-
-.servis button {
-  /* Kolory bazowe */
-  background-color: var(--orange);
-  color: var(--white);
-  
-  /* Reset obramowania i kursor */
-  border: none;
-  cursor: pointer;
-
-  /* Stylistyka identyczna z numberButton */
-  display: inline-block;
-  padding: 20px 80px;      /* Duży padding jak w numberButton */
-  border-radius: 30px;     /* Zaokrąglone rogi */
-  font-weight: bold;
-  font-family: inherit;    /* Dziedziczenie SF Pro */
-  font-size: 1rem;         /* Lub dostosuj do potrzeb */
-  margin-top: 20px;
-  
-  /* Animacja płynnego skalowania */
-  transition: transform 0.2s, opacity 0.3s;
-}
-
-.servis button:hover {
-  /* Efekt powiększenia identyczny z numberButton */
-  transform: scale(1.05);
-  opacity: 1; /* Resetujemy opacity, by używać tylko skali */
-}
-
-.servis button:active {
-  transform: scale(0.98); 
-}
-
-/* Styl dla placeholder (opcjonalnie) */
-.servis textarea::placeholder {
-  color: var(--gray);
-}
 
 
 /* RESPONSYWNOŚĆ */
@@ -284,9 +163,6 @@ a.numberButton:hover {
 	}
 	.header__kontakt{
 		display: none;
-	}
-	a.numberButton {
-		padding: 15px 60px;
 	}
 		.reviews__container {
 		gap: 5px;

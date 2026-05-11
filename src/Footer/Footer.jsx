@@ -4,7 +4,6 @@ import { IoIosMail } from "react-icons/io";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoTime } from "react-icons/io5";
 
-// social_media
 import { FaFacebook } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 
@@ -41,16 +40,15 @@ export default function Footer() {
 					</div>
 					<div className='footer__content'>
 						<p className='footer__media'>BĄDŹ NA BIEŻĄCO</p>
-						{/* <a href="" className="instagram"></a> */}
 						<div className='footer__media--container'>
 							<a
 								href='https://www.facebook.com/gsmceent/directory_contact_info'
 								className='facebook'
 							>
-								<FaFacebook size='40'/>
+								<FaFacebook size='30'/>
 							</a>
 							<a href='https://wa.me/48697020972' className='whatsapp'>
-								<RiWhatsappFill size='40' />
+								<RiWhatsappFill size='33' />
 							</a>
 						</div>
 					</div>

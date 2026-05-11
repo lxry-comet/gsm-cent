@@ -82,7 +82,6 @@
 	color: var(--orange);
 }
 
-/* Responsive iframe container */
 .googlephotomaps {
 	display: block;
 	width: 100%;
@@ -93,7 +92,7 @@
 .googlephotomaps-wrapper {
 	position: relative;
 	width: 100%;
-	padding-bottom: 75%; /* 4:3 aspect ratio */
+	padding-bottom: 75%; 
 	height: 0;
 	overflow: hidden;
 	border-radius: 8px;
@@ -109,7 +108,6 @@
 	border-radius: 8px;
 }
 
-/* Desktop view - 400x300 */
 @media (min-width: 768px) {
 	.googlephotomaps-wrapper {
 		width: 300px;
@@ -119,7 +117,6 @@
 	}
 }
 
-/* Tablet view */
 @media (max-width: 1024px) {
 	.footer__container--elemetns {
 		grid-template-columns: 1fr 1fr;
@@ -127,7 +124,6 @@
 	}
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
 	.footer__container--elemetns {
 		grid-template-columns: 1fr;
