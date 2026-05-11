@@ -1,0 +1,8 @@
+.brands__container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.brands__model--image{
+	width: 450px;
+}

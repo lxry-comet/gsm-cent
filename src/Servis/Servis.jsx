@@ -45,7 +45,6 @@ export default function Whatwedo() {
         alert("Błąd wysyłki: " + error.text);
     });
   };
-
   return (
     <section className='servis'>
       <div className='container servis__container'>
@@ -57,7 +56,7 @@ export default function Whatwedo() {
           placeholder="Opisz tutaj swój problem..." 
         />
         <button className="servis__btn-open" onClick={() => setIsModalOpen(true)}>
-          WYŚLIJ  <LuSend size='20'/>
+          WYŚLIJ ZAPYTANIE  <LuSend size='20'/>
         </button>
       </div>
 

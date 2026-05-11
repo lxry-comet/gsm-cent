@@ -47,6 +47,9 @@ a {
 	color: inherit;
 	transition: 0.3s;
 }
+li{
+	list-style: none;
+}
 a:hover {
 	color: var(--orange);
 }
