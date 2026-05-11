@@ -41,14 +41,16 @@
   border: none;
   cursor: pointer;
   display: flex;
+	justify-content: center; 
 	align-items: center;
-  padding: 20px 80px;      
+	padding: 15px 40px;     
   border-radius: 30px;     
   font-weight: bold;
   font-family: inherit;  
   font-size: 1rem;        
   margin-top: 20px;
   transition: transform 0.2s, opacity 0.3s;
+  gap: 12px;
 }
 
 .servis button:hover {

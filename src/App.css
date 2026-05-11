@@ -64,6 +64,11 @@ a.numberButton {
 	font-weight: bold;
 	margin-top: 20px;
 	transition: transform 0.2s;
+
+	padding: 15px 30px; 
+  font-size: 0.9rem;
+  width: auto;
+  max-width: 100%;
 }
 a.numberButton:hover {
 	transform: scale(1.05);
@@ -178,6 +183,13 @@ a.numberButton:hover {
 		display: none;
 		
 	}
+	a.numberButton {
+    padding: 20px 80px; 
+    font-size: 1rem;
+  }
+	.servis__btn-open {
+    padding: 20px 80px;
+  }
 }
 @media (max-width: 320px) {
 
