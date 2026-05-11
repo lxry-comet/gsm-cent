@@ -155,7 +155,7 @@ a.numberButton:hover {
 	}
 
 	.review-card {
-		min-width: calc(80vw - 20px); /* Полная ширина экрана */
+		min-width: calc(80vw - 20px); 
 		height: 200px;
 		padding: 20px;
 	}
@@ -164,7 +164,7 @@ a.numberButton:hover {
 		
 	}
 	a.numberButton {
-    padding: 20px 80px; 
+    padding: 20px 40px; 
     font-size: 1rem;
   }
 	.servis__btn-open {
@@ -174,7 +174,7 @@ a.numberButton:hover {
 @media (max-width: 320px) {
 
 	.review-card {
-		min-width: calc(80vw - 20px); /* Полная ширина экрана */
+		min-width: calc(80vw - 20px); 
 		height: 200px;
 		padding: 20px;
 	}
