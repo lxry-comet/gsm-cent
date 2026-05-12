@@ -6,7 +6,7 @@ export default function Brands() {
 		<section className='brands'>
 			<div className='container brands__container'>
 				<ul className='brands__list'>
-				<h2 className='brands__title'>Marki telefonów</h2>
+					<h2 className='brands__title'>Marki telefonów które naprawiamy</h2>
 
 					{brandsData.brands.map(brand => (
 						<li key={brand.id} className='brands__item'>
@@ -19,11 +19,18 @@ export default function Brands() {
 						</li>
 					))}
 				</ul>
-				<img 
-				className='brands__model--image'
-				src='/gsm-cent/images/servis.png' 
-				alt='Serwis' 
-				/>
+				<div className='img__container'>
+					<img
+						className='brands__model--image'
+						src='/gsm-cent/images/do_i_po.png'
+						alt='Naprawa'
+					/>
+					<img
+						className='brands__model--image'
+						src='/gsm-cent/images/servis.png'
+						alt='Serwis'
+					/>
+				</div>
 			</div>
 		</section>
 	)

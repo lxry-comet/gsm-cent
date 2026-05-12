@@ -1,8 +1,96 @@
-.brands__container{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+.brands {
+	padding: 100px 20px;
+	background-color: var(--white);
 }
-.brands__model--image{
-	width: 450px;
+.brands__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+	gap: 40px;
+	text-align: center;
+
+	background-color: var(--black);
+	border-radius: 35px;
+	padding: 40px;
+}
+.brands__list {
+	flex: 1 1 320px;
+	min-width: 280px;
+	max-width: 560px;
+	text-align: center;
+}
+.brands__title {
+	margin-bottom: 30px;
+	font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+	color: var(--white);
+}
+.brands__item {
+	list-style: none;
+	margin-bottom: 18px;
+}
+.brands__card {
+	padding: 24px 20px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(6px);
+}
+.brands__name {
+	margin-bottom: 8px;
+	font-size: 1.3rem;
+	color: var(--white);
+}
+.brands__model {
+	margin: 0;
+	color: var(--white);
+}
+.img__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 24px;
+	flex: 1 1 320px;
+	min-width: 280px;
+}
+.brands__model--image {
+	width: 350px;
+	max-width: 100%;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .brands {
+    padding: 60px 12px;
+  }
+  .brands__container {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 15px; /* Zmniejszyłem nieco boczny padding */
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box; /* Upewnij się, że padding nie zwiększa szerokości */
+  }
+  .brands__list,
+  .img__container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0; /* KLUCZ: Usuwamy blokadę 280px */
+    flex: none;
+  }
+  
+  /* Jeśli masz padding wewnątrz karty, on też może blokować zwężanie */
+  .brands__card {
+    padding: 18px 10px; /* Zmniejszony boczny padding wewnątrz karty */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .brands__model--image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
