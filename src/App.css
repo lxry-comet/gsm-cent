@@ -171,7 +171,7 @@ a.numberButton:hover {
     font-size: 1rem;
   }
 	.servis__btn-open {
-    padding: 20px 80px;
+    padding: 20px 20px;
   }
 }
 @media (max-width: 320px) {
