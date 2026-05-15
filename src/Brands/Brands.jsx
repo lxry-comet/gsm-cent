@@ -5,7 +5,7 @@ export default function Brands() {
 	return (
 		<section className='brands'>
 			<div className='container brands__container'>
-								<div className='img__container'>
+				<div className='img__container naprawa'>
 					<img
 						className='brands__model--image'
 						src='/gsm-cent/images/do_i_po.png'
