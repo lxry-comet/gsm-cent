@@ -1,35 +1,47 @@
 .brands {
 	padding: 100px 20px;
-	background-color: var(--white);
+	background-color: var(--black);
 }
 .brands__container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
 	align-items: stretch;
 	flex-wrap: wrap;
 	gap: 40px;
-	text-align: center;
 
-	background-color: var(--black);
-	border-radius: 35px;
 	padding: 40px;
+
 }
 .brands__list {
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	flex: 1 1 320px;
 	min-width: 280px;
-	max-width: 560px;
+	max-width: 680px;
 	text-align: center;
+
+	padding-left: 0px;
+	gap: 10px;
 }
 .brands__title {
 	margin-bottom: 30px;
 	font-size: clamp(1.8rem, 2.5vw, 2.8rem);
 	color: var(--white);
+
+	padding: 50px 0;
+
+	margin: 0 auto;
 }
 .brands__item {
 	list-style: none;
 	margin-bottom: 18px;
 }
 .brands__card {
+	width: 130px;
+	height: 110px;
 	padding: 24px 20px;
 	border-radius: 20px;
 	background: rgba(255, 255, 255, 0.08);
@@ -48,13 +60,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
-	gap: 24px;
-	flex: 1 1 320px;
-	min-width: 280px;
+
+	
+
 }
 .brands__model--image {
-	width: 350px;
+	width: 250px;
 	max-width: 100%;
 	height: auto;
 	border-radius: 20px;
@@ -68,22 +79,21 @@
   .brands__container {
     flex-direction: column;
     align-items: center;
-    padding: 24px 15px; /* Zmniejszyłem nieco boczny padding */
+    padding: 24px 15px; 
     gap: 24px;
     width: 100%;
-    box-sizing: border-box; /* Upewnij się, że padding nie zwiększa szerokości */
+    box-sizing: border-box;
   }
   .brands__list,
   .img__container {
     width: 100%;
     max-width: 100%;
-    min-width: 0; /* KLUCZ: Usuwamy blokadę 280px */
+    min-width: 0; 
     flex: none;
   }
   
-  /* Jeśli masz padding wewnątrz karty, on też może blokować zwężanie */
   .brands__card {
-    padding: 18px 10px; /* Zmniejszony boczny padding wewnątrz karty */
+    padding: 18px 10px; 
     width: 100%;
     box-sizing: border-box;
   }

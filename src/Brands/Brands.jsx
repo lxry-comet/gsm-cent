@@ -5,6 +5,13 @@ export default function Brands() {
 	return (
 		<section className='brands'>
 			<div className='container brands__container'>
+								<div className='img__container'>
+					<img
+						className='brands__model--image'
+						src='/gsm-cent/images/do_i_po.png'
+						alt='Naprawa'
+					/>
+				</div>
 				<ul className='brands__list'>
 					<h2 className='brands__title'>Marki telefonów które naprawiamy</h2>
 
@@ -20,11 +27,6 @@ export default function Brands() {
 					))}
 				</ul>
 				<div className='img__container'>
-					<img
-						className='brands__model--image'
-						src='/gsm-cent/images/do_i_po.png'
-						alt='Naprawa'
-					/>
 					<img
 						className='brands__model--image'
 						src='/gsm-cent/images/servis.png'
