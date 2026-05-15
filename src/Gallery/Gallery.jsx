@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import imagesData from '../json/images.json';
-import { FaTimes } from 'react-icons/fa'; // Jeśli masz react-icons
+import { FaTimes } from 'react-icons/fa';
 import './Galley.css';
 
 export default function Gallery() {
@@ -14,7 +14,7 @@ export default function Gallery() {
             <li 
               key={index} 
               className='gallery__item' 
-              onClick={() => setSelectedImg(imgUrl)} // Kliknięcie otwiera zdjęcie
+              onClick={() => setSelectedImg(imgUrl)} 
             >
               <img
                 src={imgUrl}

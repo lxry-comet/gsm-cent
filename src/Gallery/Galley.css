@@ -67,3 +67,19 @@
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+/* Desktop - 5 kolumn z większym odstępem między rzędami */
+@media (min-width: 1200px) {
+  .gallery__list {
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 50px;
+    column-gap: 15px;
+  }
+}
+
+/* Ukryj strzałki na 320px i poniżej */
+@media (max-width: 320px) {
+  .gallery__modal-close {
+    display: none;
+  }
+}
