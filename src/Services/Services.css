@@ -126,6 +126,8 @@
 @media (max-width: 480px) {
 	.service-slide {
 		padding: 60px 10px;
+		background: var(--black) !important;
+		background-image: none !important;
 	}
 
 	.slide__list {
@@ -137,5 +139,10 @@
 		width: 100%;
 		min-height: auto;
 		padding: 12px 10px;
- }
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none !important;
+	}
 }

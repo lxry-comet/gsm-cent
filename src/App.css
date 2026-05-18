@@ -86,7 +86,7 @@ a.numberButton:hover {
   background-color: var(--black);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px 600px;
+ 	background-size: cover;
   padding: 200px 100px;
 }
 .hero,
