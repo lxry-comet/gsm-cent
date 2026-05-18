@@ -40,8 +40,9 @@ export default function Servis() {
 									backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${imageUrl})`
 								}}
 							>
+                <h3 className='slide__title'>{category.kategoria}</h3>
 								<div className='container slide__content'>
-									<h3 className='slide__title'>{category.kategoria}</h3>
+									
 									<ul className='slide__list'>
 										{category.lista.map((item, itemIndex) => (
 											<li key={itemIndex} className='slide__item'>
