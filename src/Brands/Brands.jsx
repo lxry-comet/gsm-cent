@@ -7,21 +7,24 @@ export default function Brands() {
 			<div className='container brands__container'>
 				<div className='serwis'>
 					<img
+						loading='lazy'
 						className='brands__serwis--image naprawa'
-						src='/gsm-cent/images/servis.png'
+						src='/gsm-cent/images/servis.webp'
 						alt='Naprawa'
 					/>
 				</div>
 				<div className='img__container'>
 					<img
+						loading='lazy'
 						className='brands__model--image beaforeAfterService'
-						src='/gsm-cent/images/do_i_po.png'
+						src='/gsm-cent/images/do_i_po.webp'
 						alt='Do i po naprawie'
 					/>
 				</div>
 				<div className='container__naprawa'>
 					<div className='img__container'>
 						<img
+							loading='lazy'
 							className='brands__model--image naprawa'
 							src='/gsm-cent/images/ip_before.png'
 							alt='Naprawa'
@@ -43,13 +46,13 @@ export default function Brands() {
 					</ul>
 					<div className='img__container'>
 						<img
+							loading='lazy'
 							className='brands__model--image naprawa'
-							src='/gsm-cent/images/ip_after.png'
+							src='/gsm-cent/images/ip_after.webp'
 							alt='Serwis'
 						/>
 					</div>
 				</div>
-
 			</div>
 		</section>
 	)

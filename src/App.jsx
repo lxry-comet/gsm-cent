@@ -1,48 +1,48 @@
-import React from 'react'
+import { Suspense, lazy } from 'react'
 
 import Header from './Header/Header.jsx'
-import Hero from './Hero/Hero.jsx'
-import Servis from './Servis/Servis.jsx'
-import About from './About/About.jsx'
-import Reviews from './Reviews/Reviews.jsx'
-import Footer from './Footer/Footer.jsx'
-import Services from './Services/Services.jsx' 
-import Brands from './Brands/Brands.jsx'
+const Hero = lazy(() => import('./Hero/Hero.jsx'))
+const Servis = lazy(() => import('./Servis/Servis.jsx'))
+const About = lazy(() => import('./About/About.jsx'))
+const Reviews = lazy(() => import('./Reviews/Reviews.jsx'))
+const Footer = lazy(() => import('./Footer/Footer.jsx'))
+const Services = lazy(() => import('./Services/Services.jsx'))
+const Brands = lazy(() => import('./Brands/Brands.jsx'))
 
-import useFilter from './Filter/Filter.jsx'; 
 import './App.css'
+import useFilter from './Filter/Filter.jsx'
 
 export default function App() {
-  const { state, setView } = useFilter();
+	const { state, setView } = useFilter()
 
-  return (
-    <div className='App'>
-      <Header 
-        onSelectUslugi={() => setView('uslugi')} 
-        onSelectRepair={() => setView('repair')}
-        onSelectHome={() => setView('home')} 
-      />
+	return (
+		<div className='App'>
+			<Header
+				onSelectUslugi={() => setView('uslugi')}
+				onSelectRepair={() => setView('repair')}
+				onSelectHome={() => setView('home')}
+			/>
 
-      {state.currentView === 'uslugi' ? (
-        <>
-          <Services models={state.modeleTel} />
-          <Servis services={state.uslugi} />
-        </>
-      ) : state.currentView === 'repair' ? (
-        <>
-          <Brands />
-        </>
-      ) : (
-        /* WIDOK: STRONA GŁÓWNA */
-        <>
-          <Hero />
-          <About />
-          <Reviews />
-          <Servis />
-        </>
-      )}
+			<Suspense fallback={<div className='loading'>Ładowanie...</div>}>
+				{state.currentView === 'uslugi' ? (
+					<>
+						<Services models={state.modeleTel} />
+						<Servis services={state.uslugi} />
+					</>
+				) : state.currentView === 'repair' ? (
+					<Brands />
+				) : (
+					/* WIDOK: STRONA GŁÓWNA */
+					<>
+						<Hero />
+						<About />
+						<Reviews />
+						<Servis />
+					</>
+				)}
 
-      <Footer />
-    </div>
-  )
+				<Footer />
+			</Suspense>
+		</div>
+	)
 }
