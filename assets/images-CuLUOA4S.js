@@ -1,0 +1,1 @@
+var e={actualImages:[`/gsm-cent/images/serwis1.webp`,`/gsm-cent/images/serwis2.webp`,`/gsm-cent/images/serwis3.webp`,`/gsm-cent/images/serwis4.webp`,`/gsm-cent/images/serwis5.webp`,`/gsm-cent/images/serwis6.webp`,`/gsm-cent/images/serwis7.webp`,`/gsm-cent/images/serwis8.webp`,`/gsm-cent/images/serwis9.webp`,`/gsm-cent/images/serwis10.webp`]};export{e as t};
