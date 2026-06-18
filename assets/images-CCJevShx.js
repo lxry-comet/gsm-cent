@@ -1,0 +1,1 @@
+var e={actualImages:[`/images/serwis1.webp`,`/images/serwis2.webp`,`/images/serwis3.webp`,`/images/serwis4.webp`,`/images/serwis5.webp`,`/images/serwis6.webp`,`/images/serwis7.webp`,`/images/serwis8.webp`,`/images/serwis9.webp`,`/images/serwis10.webp`]};export{e as t};
