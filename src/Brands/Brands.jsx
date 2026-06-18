@@ -9,7 +9,7 @@ export default function Brands() {
 					<img
 						loading='lazy'
 						className='brands__serwis--image naprawa'
-						src='/gsm-cent/images/servis.webp'
+						src='/images/servis.webp'
 						alt='Naprawa'
 					/>
 				</div>
@@ -17,7 +17,7 @@ export default function Brands() {
 					<img
 						loading='lazy'
 						className='brands__model--image beaforeAfterService'
-						src='/gsm-cent/images/do_i_po.webp'
+						src='/images/do_i_po.webp'
 						alt='Do i po naprawie'
 					/>
 				</div>
@@ -26,7 +26,7 @@ export default function Brands() {
 						<img
 							loading='lazy'
 							className='brands__model--image naprawa'
-							src='/gsm-cent/images/ip_before.png'
+							src='/images/ip_before.png'
 							alt='Naprawa'
 						/>
 					</div>
@@ -48,7 +48,7 @@ export default function Brands() {
 						<img
 							loading='lazy'
 							className='brands__model--image naprawa'
-							src='/gsm-cent/images/ip_after.webp'
+							src='/images/ip_after.webp'
 							alt='Serwis'
 						/>
 					</div>
