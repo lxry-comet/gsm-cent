@@ -12,7 +12,7 @@ export default function Footer() {
 		<footer className='footer'>
 			<div className='footer__container'>
 				<div className='footer__title--container'>
-					<h2 className='footer__title'>GSM-CENT</h2>
+					<h2 className='footer__title'>APPLE-GSM</h2>
 					<span className='footer__title--after'>IPHONE SZCZECIN</span>
 				</div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
 				</div>
 			</div>
 			<p className='footer__text'>
-				© 2026 GSM-cent | Serwis iPhone | Naprawa Telefonów i Laptopów | Skup
+				© 2026 APPLE-GSM | Serwis iPhone | Naprawa Telefonów i Laptopów | Skup
 				Złota i Lombard
 			</p>
 		</footer>

@@ -29,7 +29,9 @@ export default function Header({ onSelectHome, onSelectUslugi, onSelectRepair })
     <header className='header'>
       <div className='container header__container'>
         <div className='header__title--container' onClick={() => handleNavClick(onSelectHome)} style={{cursor: 'pointer'}}>
-          <span className='header__title'>GSM-CENT</span>
+          {/* <span className='header__title'>GSM-CENT</span> */}
+          <span className='header__title'>APPLE-GSM</span>
+
           <span className='header__title--after'>IPHONE SZCZECIN</span>
         </div>
 

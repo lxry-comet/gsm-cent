@@ -3,7 +3,7 @@ import images from '../json/images.json'
 
 import './Hero.css'
 import { FaPhone } from 'react-icons/fa6'
-
+import { FaApple } from "react-icons/fa";
 export default function Hero() {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const photoArray = images.actualImages
@@ -25,7 +25,7 @@ export default function Hero() {
 			<div className='hero__overlay'></div>
 			<div className='container hero__container'>
 				<h2 className='hero__title'>
-					SERWIS <span>apple</span> GSM-CENT
+					SERWIS <span>apple<FaApple /></span> GSM
 				</h2>
 				<p className='hero__discription'>
 					Serwis telefonów, komputerów, laptopów,nawigacji oraz konsoli.
