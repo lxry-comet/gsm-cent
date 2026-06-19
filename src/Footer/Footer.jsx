@@ -60,7 +60,7 @@ export default function Footer() {
 							<iframe
 								src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.294484058614!2d14.5344405!3d53.4274427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa093cb92796d1%3A0x97a1ea3ad805fc7d!2siPhone%20Serwis%20Szczecin!5e0!3m2!1spl!2spl!4v1778332618187!5m2!1spl!2spl'
 								loading='lazy'
-								referrerpolicy='no-referrer-when-downgrade'
+								referrerPolicy='no-referrer-when-downgrade'
 							></iframe>
 						</div>
 					</div>

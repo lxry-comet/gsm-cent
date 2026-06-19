@@ -1,25 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react'
+import brandsData from '../json/brands.json'
 
 const useFilter = () => {
-  const [state, setState] = useState({
-    uslugi: [
-      { id: 1, name: "Naprawa wyświetlacza" },
-      { id: 2, name: "Wymiana baterii" }
-    ],
-    modeleTel: [],
-    currentView: 'home'
-  });
+	const [state, setState] = useState({
+		uslugi: [
+			{ id: 1, name: 'Naprawa wyświetlacza' },
+			{ id: 2, name: 'Wymiana baterii' }
+		],
+		modeleTel: [],
+		currentView: 'home'
+	})
 
-  useEffect(() => {
-    fetch('../json/brands.json') 
-      .then(res => res.json())
-      .then(data => setState(prev => ({ ...prev, modeleTel: data.brands })))
-      .catch(err => console.error(err));
-  }, []);
+	useEffect(() => {
+		setState(prev => ({ ...prev, modeleTel: brandsData.brands }))
+	}, [])
 
-  const setView = (view) => setState(prev => ({ ...prev, currentView: view }));
+	const setView = view => setState(prev => ({ ...prev, currentView: view }))
 
-  return { state, setView };
-};
+	return { state, setView }
+}
 
-export default useFilter;
+export default useFilter
