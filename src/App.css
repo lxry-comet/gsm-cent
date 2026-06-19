@@ -17,7 +17,6 @@
 	box-sizing: border-box;
 }
 
-
 body {
 	padding-top: 85px;
 	margin: 0;
@@ -32,7 +31,7 @@ h2 {
 	text-transform: uppercase;
 	font-weight: 800;
 }
-span{
+span {
 	color: var(--orange);
 }
 
@@ -47,17 +46,22 @@ a {
 	color: inherit;
 	transition: 0.3s;
 }
-li{
+li {
 	list-style: none;
 }
 a:hover {
 	color: var(--orange);
 }
+.header__title svg,
+.footer__title svg,
+.hero__title svg {
+	color: var(--orange);
+}
 a.numberButton {
 	display: inline-flex;
-  align-items: center;  
-  justify-content: center;
-  gap: 10px;               
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 
 	background-color: var(--orange);
 	color: var(--white);
@@ -67,10 +71,10 @@ a.numberButton {
 	margin-top: 20px;
 	transition: transform 0.2s;
 
-	padding: 15px 30px; 
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
+	padding: 15px 30px;
+	font-size: 0.9rem;
+	width: auto;
+	max-width: 100%;
 }
 a.numberButton:hover {
 	transform: scale(1.05);
@@ -82,12 +86,12 @@ a.numberButton:hover {
 	overflow: hidden;
 	padding: 20px 25px;
 }
-.hero{
-  background-color: var(--black);
-  background-repeat: no-repeat;
-  background-position: center;
- 	background-size: cover;
-  padding: 200px 100px;
+.hero {
+	background-color: var(--black);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 200px 100px;
 }
 .hero,
 .about,
@@ -96,12 +100,13 @@ a.numberButton:hover {
 }
 
 .header,
-.hero,.servis {
+.hero,
+.servis {
 	text-align: center;
 }
 
-
-.hero,.servis {
+.hero,
+.servis {
 	background-color: var(--black);
 	color: var(--white);
 }
@@ -121,7 +126,7 @@ a.numberButton:hover {
 /* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
 	.hero,
-	.about__container{
+	.about__container {
 		grid-template-columns: 1fr;
 		display: flex;
 		flex-direction: column;
@@ -137,45 +142,44 @@ a.numberButton:hover {
 	}
 }
 @media (max-width: 560px) {
-	h1, h2 {
+	h1,
+	h2 {
 		font-size: 1.2rem;
 	}
-	h3{
+	h3 {
 		font-size: 1rem;
 	}
-	.header__kontakt{
+	.header__kontakt {
 		display: none;
 	}
-		.reviews__container {
+	.reviews__container {
 		gap: 5px;
 		padding: 20px 10px;
 	}
 
 	.review-card {
-		min-width: calc(80vw - 20px); 
+		min-width: calc(80vw - 20px);
 		height: 200px;
 		padding: 20px;
 	}
-	.reviews__arrow{
+	.reviews__arrow {
 		display: none;
-		
 	}
 	a.numberButton {
-    padding: 20px 40px; 
-    font-size: 1rem;
-  }
+		padding: 20px 40px;
+		font-size: 1rem;
+	}
 	.servis__btn-open {
-    padding: 20px 20px;
-  }
+		padding: 20px 20px;
+	}
 }
 @media (max-width: 320px) {
-
 	.review-card {
-		min-width: calc(80vw - 20px); 
+		min-width: calc(80vw - 20px);
 		height: 200px;
 		padding: 20px;
 	}
-	.review-card{
-		min-width: 300px; 
+	.review-card {
+		min-width: 300px;
 	}
 }

@@ -7,6 +7,7 @@ import { FaPhone } from 'react-icons/fa6'
 import { FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import { IoIosMail } from 'react-icons/io'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import { FaApple } from "react-icons/fa";
 
 export default function Header({ onSelectHome, onSelectUslugi, onSelectRepair }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -30,7 +31,7 @@ export default function Header({ onSelectHome, onSelectUslugi, onSelectRepair })
       <div className='container header__container'>
         <div className='header__title--container' onClick={() => handleNavClick(onSelectHome)} style={{cursor: 'pointer'}}>
           {/* <span className='header__title'>GSM-CENT</span> */}
-          <span className='header__title'>APPLE-GSM</span>
+          <span className='header__title'>APPLE<FaApple />GSM</span>
 
           <span className='header__title--after'>IPHONE SZCZECIN</span>
         </div>

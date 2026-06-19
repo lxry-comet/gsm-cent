@@ -1,5 +1,7 @@
 import './Footer.css'
 import { FaPhone } from "react-icons/fa6";
+import { FaApple } from "react-icons/fa";
+
 import { IoIosMail } from "react-icons/io";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoTime } from "react-icons/io5";
@@ -12,7 +14,7 @@ export default function Footer() {
 		<footer className='footer'>
 			<div className='footer__container'>
 				<div className='footer__title--container'>
-					<h2 className='footer__title'>APPLE-GSM</h2>
+					<h2 className='footer__title'>APPLE<FaApple />GSM</h2>
 					<span className='footer__title--after'>IPHONE SZCZECIN</span>
 				</div>
 
