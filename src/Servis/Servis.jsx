@@ -32,7 +32,7 @@ export default function Whatwedo() {
 			message: formData.message,
 			user_email: formData.user_email,
 			user_phone: formData.user_phone,
-			to_email: 'borv2006@gmail.com'
+			to_email: 'gsmcentserwis@gmail.com'
 		}
 
 		emailjs
