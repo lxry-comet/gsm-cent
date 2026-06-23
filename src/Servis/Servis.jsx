@@ -17,12 +17,16 @@ export default function Whatwedo() {
 	const [formData, setFormData] = useState({
 		message: '',
 		user_email: '',
-		user_phone: ''
+		user_phone: '',
+		phone_prefix: '+48'
 	})
 
 	const handleInputChange = e => {
 		const { name, value } = e.target
-		setFormData(prev => ({ ...prev, [name]: value }))
+		setFormData(prev => ({
+			...prev,
+			[name]: name === 'user_phone' ? value.replace(/\D/g, '') : value
+		}))
 	}
 
 	const sendEmail = e => {
@@ -31,16 +35,16 @@ export default function Whatwedo() {
 		const templateParams = {
 			message: formData.message,
 			user_email: formData.user_email,
-			user_phone: formData.user_phone,
+			user_phone: `${formData.phone_prefix}${formData.user_phone}`,
 			to_email: 'gsmcentserwis@gmail.com'
 		}
 
 		emailjs
 			.send(
-				'service_fqjjv0y',
-				'template_unttv7r',
+				'service_35igr38',
+				'template_9qu188j',
 				templateParams,
-				'bAWwmQSlDI8u-O5Gs'
+				'Vrc6GzB9CCg7sIjqJ' //pabic key
 			)
 			.then(
 				result => {
@@ -126,15 +130,31 @@ export default function Whatwedo() {
 
 						<form className='servis-modal__form' onSubmit={sendEmail}>
 							<h3>Podaj dane kontaktowe</h3>
-							<input
-								type='tel'
-								name='user_phone'
-								value={formData.user_phone}
-								onChange={handleInputChange}
-								placeholder='Numer telefonu'
-								required
-								className='servis-modal__input'
-							/>
+							<div className='servis-modal__phone-wrapper'>
+								<select
+									name='phone_prefix'
+									value={formData.phone_prefix}
+									onChange={handleInputChange}
+									className='servis-modal__select'
+								>
+									<option value='+48'>+48</option>
+									<option value='+49'>+49</option>
+									<option value='+43'>+43</option>
+									<option value='+41'>+41</option>
+								</select>
+								<input
+									type='tel'
+									name='user_phone'
+									value={formData.user_phone}
+									onChange={handleInputChange}
+									placeholder='Numer telefonu'
+									required
+									className='servis-modal__input servis-modal__input--phone'
+									inputMode='tel'
+									pattern='[0-9]*'
+									maxLength={15}
+								/>
+							</div>
 							<input
 								type='email'
 								name='user_email'
@@ -142,7 +162,7 @@ export default function Whatwedo() {
 								onChange={handleInputChange}
 								placeholder='Adres e-mail'
 								required
-								className='servis-modal__input'
+								className='servis-modal__input servis-modal__input--email'
 							/>
 							<button type='submit' className='servis-modal__submit'>
 								POTWIERDŹ I WYŚLIJ
