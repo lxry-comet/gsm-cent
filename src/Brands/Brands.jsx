@@ -13,15 +13,7 @@ export default function Brands() {
 						alt='Naprawa'
 					/>
 				</div>
-				<div className='img__container'>
-					<img
-						loading='lazy'
-						className='brands__model--image beaforeAfterService'
-						src='/images/do_i_po.webp'
-						alt='Do i po naprawie'
-					/>
-				</div>
-				<div className='container__naprawa'>
+					<div className='container__naprawa'>
 					<div className='img__container'>
 						<img
 							loading='lazy'
@@ -53,6 +45,15 @@ export default function Brands() {
 						/>
 					</div>
 				</div>
+				<div className='img__container'>
+					<img
+						loading='lazy'
+						className='brands__model--image beaforeAfterService'
+						src='/images/do_i_po.webp'
+						alt='Do i po naprawie'
+					/>
+				</div>
+
 			</div>
 		</section>
 	)
