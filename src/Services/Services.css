@@ -1,219 +1,245 @@
-/* Services.css — слайдер услуг (desktop/tablet) + список (mobile) */
-
 .services {
-	--s-accent: var(--orange, #ff7a00);
-	--s-accent-hover: color-mix(in srgb, var(--s-accent) 85%, white);
-	--s-text: var(--white, #fff);
-	--s-bg: var(--black, #121212);
+	--radius: 12px;
+	--tint: color-mix(in srgb, var(--orange) 14%, transparent);
 
 	width: 100%;
-	padding: 30px 0;
-	background-color: var(--s-bg);
+	padding: clamp(24px, 5vw, 60px) 0;
+	background-color: var(--black);
+	color: var(--white);
 }
 
+/* ---------- Шапка ---------- */
+.services__intro {
+	max-width: 820px;
+	margin: 0 auto clamp(24px, 4vw, 48px);
+	padding: 0 20px;
+	text-align: center;
+}
+
+.services__title {
+	font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+	line-height: 1.15;
+	text-wrap: balance;
+	margin: 0 0 16px;
+}
+
+.services__title::after {
+	content: '';
+	display: block;
+	width: 70px;
+	height: 4px;
+	margin: 16px auto 0;
+	border-radius: 2px;
+	background: var(--orange);
+}
+
+.services__description {
+	font-size: clamp(1rem, 2vw, 1.125rem);
+	line-height: 1.6;
+	color: color-mix(in srgb, var(--white) 75%, transparent);
+	text-wrap: pretty;
+	margin: 0;
+}
+
+/* ---------- Слайдер ---------- */
 .services__slider {
 	width: 100%;
+	max-width: 1400px;
 	min-height: 650px;
+	height: auto;
+	margin-inline: auto;
+	border-radius: var(--radius);
+	overflow: hidden;
+
+	/* вместо !important */
+	--swiper-theme-color: var(--orange);
+	--swiper-navigation-color: var(--orange);
+	--swiper-navigation-size: 32px;
+	--swiper-pagination-color: var(--orange);
+	--swiper-pagination-bullet-inactive-color: var(--white);
+	--swiper-pagination-bullet-inactive-opacity: 0.4;
 }
 
 .service-slide {
 	position: relative;
-	isolation: isolate;
 	min-height: 650px;
+	padding: 70px clamp(48px, 8vw, 90px) 70px;
+	background-position: center;
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 36px;
 	text-align: center;
-	color: var(--s-text);
-	background-position: center;
-	background-size: cover;
-}
-
-/* Затемнение, чтобы текст читался на любом фоне */
-.service-slide::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	z-index: -1;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75));
-}
-
-.slide__content {
-	position: relative;
-	width: 100%;
-	max-width: 900px;
-	height: 100%;
-	margin: 0 auto;
-	padding: 50px 20px 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	color: var(--white);
 }
 
 .slide__title {
-	font-size: clamp(1.8rem, 4vw, 2.5rem);
-	line-height: 1.15;
-	text-align: center;
+	font-size: clamp(1.8rem, 4vw, 2.75rem);
+	letter-spacing: 0.04em;
+	color: var(--orange);
 	text-transform: uppercase;
-	text-wrap: balance;
-	color: var(--s-accent);
+	text-align: center;
+	text-shadow: 0 2px 16px rgb(0 0 0 / 0.6);
+	margin: 0;
 }
 
 .slide__list {
 	list-style: none;
 	padding: 0;
-	margin: auto 0 30px;
+	margin: 0;
+	width: 100%;
+	max-width: 960px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 10px;
+	gap: 14px;
 }
 
 .slide__item {
-	flex: 1 1 260px;
-	max-width: 300px;
-	min-height: 100px;
-	padding: 14px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex: 1 1 260px;
+	max-width: 300px;
+	min-height: 96px;
+	padding: 16px;
 	font-size: 1rem;
 	line-height: 1.35;
 	text-align: center;
-	background: rgba(18, 18, 18, 0.85);
-	backdrop-filter: blur(4px);
-	border-left: 3px solid var(--s-accent);
-	border-radius: 4px;
+	background: rgb(15 15 15 / 0.7);
+	backdrop-filter: blur(6px);
+	border: 1px solid rgb(255 255 255 / 0.08);
+	border-left: 3px solid var(--orange);
+	border-radius: 8px;
+	transition:
+		transform 0.25s ease,
+		border-color 0.25s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease;
 }
 
-/* Кнопка */
+.slide__item:hover {
+	transform: translateY(-4px);
+	background: rgb(15 15 15 / 0.85);
+	border-color: var(--orange);
+	box-shadow: 0 8px 24px color-mix(in srgb, var(--orange) 25%, transparent);
+}
+
+/* ---------- Кнопка (если добавите в разметку) ---------- */
 .slide__btn {
 	display: inline-block;
 	padding: 14px 32px;
-	background-color: var(--s-accent);
-	border: none;
-	border-radius: 6px;
-	color: var(--s-text);
+	background-color: var(--orange);
+	border: 2px solid var(--orange);
+	border-radius: 999px;
+	color: var(--white);
 	font-weight: 700;
 	text-decoration: none;
 	cursor: pointer;
-	transition: transform 0.25s, background-color 0.25s, box-shadow 0.25s;
+	transition:
+		transform 0.25s ease,
+		background-color 0.25s ease,
+		box-shadow 0.25s ease;
 }
 
 .slide__btn:hover {
-	background-color: var(--s-accent-hover);
+	background-color: transparent;
+	box-shadow: 0 6px 20px color-mix(in srgb, var(--orange) 40%, transparent);
 	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(255, 122, 0, 0.35);
 }
 
-.slide__btn:focus-visible {
-	outline: 2px solid var(--s-text);
+.slide__btn:focus-visible,
+.swiper-button-next:focus-visible,
+.swiper-button-prev:focus-visible {
+	outline: 2px solid var(--white);
 	outline-offset: 3px;
+	border-radius: 999px;
 }
 
-/* Swiper */
-.services .swiper-button-next,
-.services .swiper-button-prev {
-	color: var(--s-accent);
-}
-
-.services .swiper-button-next:focus-visible,
-.services .swiper-button-prev:focus-visible {
-	outline: 2px solid var(--s-accent);
-	outline-offset: 2px;
-	border-radius: 50%;
-}
-
-.services .swiper-pagination-bullet {
-	background: var(--s-text);
-	opacity: 0.5;
-}
-
-.services .swiper-pagination-bullet-active {
-	background: var(--s-accent);
-	opacity: 1;
-}
-
-/* Мобильный список (вместо слайдера) */
+/* ---------- Мобильный список категорий ---------- */
 .container__services {
 	display: none;
 	width: 100%;
-	padding: 40px 20px;
-	background-color: var(--s-bg);
+	padding: 24px 16px;
 }
 
 .services__category {
+	margin-bottom: 20px;
+	padding: 20px 16px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 36px;
 	text-align: center;
+	background: rgb(255 255 255 / 0.04);
+	border: 1px solid rgb(255 255 255 / 0.08);
+	border-radius: var(--radius);
 }
 
 .services__category-title {
-	margin-bottom: 16px;
-	font-size: 1.5rem;
+	font-size: 1.35rem;
+	color: var(--orange);
 	text-transform: uppercase;
-	color: var(--s-accent);
+	letter-spacing: 0.03em;
+	margin: 0 0 16px;
 }
 
 .services__category-list {
 	list-style: none;
 	padding: 0;
-	margin: 0 0 20px;
-	width: 100%;
+	margin: 0;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	width: 100%;
 }
 
 .services__category-item {
 	display: flex;
 	align-items: center;
-	padding: 14px;
+	padding: 12px 14px;
+	background: var(--tint);
+	border-left: 3px solid var(--orange);
+	border-radius: 6px;
+	color: var(--white);
 	font-size: 0.95rem;
 	line-height: 1.35;
 	text-align: left;
-	color: var(--s-text);
-	background: rgba(255, 255, 255, 0.06);
-	border-left: 3px solid var(--s-accent);
-	border-radius: 4px;
 }
 
 .services__category-btn {
 	align-self: center;
+	margin-top: 16px;
 }
 
+/* ---------- Адаптив ---------- */
 @media (max-width: 768px) {
-	.services__slider,
-	.service-slide {
-		min-height: 600px;
+	.services__slider {
+		border-radius: 0;
+		--swiper-navigation-size: 22px;
 	}
 
-	.slide__title {
-		margin-top: 20px;
+	.service-slide {
+		min-height: 600px;
+		padding: 60px 40px;
+		gap: 24px;
 	}
 
 	.slide__list {
-		gap: 8px;
-		margin: 0 10px 30px;
+		gap: 10px;
 	}
 
 	.slide__item {
 		flex-basis: 140px;
-	}
-
-	.services .swiper-button-next,
-	.services .swiper-button-prev {
-		transform: scale(0.7);
+		min-height: 80px;
+		padding: 12px;
+		font-size: 0.95rem;
 	}
 }
 
 @media (max-width: 480px) {
-	.services__slider,
-	.services .swiper-button-next,
-	.services .swiper-button-prev {
+	.services__slider {
 		display: none;
 	}
 
@@ -222,10 +248,15 @@
 	}
 }
 
+/* ---------- Доступность ---------- */
 @media (prefers-reduced-motion: reduce) {
-	.slide__btn,
-	.slide__btn:hover {
+	.slide__item,
+	.slide__btn {
 		transition: none;
+	}
+
+	.slide__item:hover,
+	.slide__btn:hover {
 		transform: none;
 	}
 }

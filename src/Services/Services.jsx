@@ -30,7 +30,8 @@ export default function Services() {
 
       {categories.length > 0 && (
         <Swiper
-          modules={[Navigation, Autoplay]}
+          modules={[Navigation, Autoplay, Pagination]}
+          pagination={{ clickable: true }}
           spaceBetween={0}
           slidesPerView={1}
           navigation
