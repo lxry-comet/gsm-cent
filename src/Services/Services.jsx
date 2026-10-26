@@ -1,5 +1,4 @@
-
-import { Autoplay, Navigation } from 'swiper/modules'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Gallery from '../Gallery/Gallery.jsx'
@@ -8,6 +7,7 @@ import servicesData from '../json/services.json'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import './Services.css'
 
 export default function Services() {
