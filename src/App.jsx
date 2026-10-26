@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react'
+import { Routes, Route } from 'react-router-dom'
 
 import Header from './Header/Header.jsx'
 const Hero = lazy(() => import('./Hero/Hero.jsx'))
@@ -8,38 +9,52 @@ const Reviews = lazy(() => import('./Reviews/Reviews.jsx'))
 const Footer = lazy(() => import('./Footer/Footer.jsx'))
 const Services = lazy(() => import('./Services/Services.jsx'))
 const Brands = lazy(() => import('./Brands/Brands.jsx'))
+const Price = lazy(() => import('./Price/Price.jsx'))
 
 import './App.css'
 import useFilter from './Filter/Filter.jsx'
 
 export default function App() {
-	const { state, setView } = useFilter()
+	const { state } = useFilter()
 
 	return (
 		<div className='App'>
-			<Header
-				onSelectUslugi={() => setView('uslugi')}
-				onSelectRepair={() => setView('repair')}
-				onSelectHome={() => setView('home')}
-			/>
+			<Header />
 
 			<Suspense fallback={<div className='loading'>Ładowanie...</div>}>
-				{state.currentView === 'uslugi' ? (
-					<>
-						<Services models={state.modeleTel} />
-						<Servis services={state.uslugi} />
-					</>
-				) : state.currentView === 'repair' ? (
-					<Brands />
-				) : (
-					/* WIDOK: STRONA GŁÓWNA */
-					<>
-						<Hero />
-						<About />
-						<Reviews />
-						<Servis />
-					</>
-				)}
+				<Routes>
+					<Route
+						path='/'
+						element={
+							<>
+								<Hero />
+								<About />
+								<Reviews />
+								<Servis />
+							</>
+						}
+					/>
+					<Route
+						path='/cennik'
+						element={
+							<>
+								<Price />
+								<Servis />
+							</>
+						}
+					/>
+					<Route
+						path='/uslugi'
+						element={
+							<>
+								<Services models={state.modeleTel} />
+								<Servis services={state.uslugi} />
+							</>
+						}
+					/>
+					<Route path='/co-naprawiamy' element={<Brands />} />
+					<Route path='*' element={<h1>Nie znaleziono strony</h1>} />
+				</Routes>
 
 				<Footer />
 			</Suspense>

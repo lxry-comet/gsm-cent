@@ -55,7 +55,7 @@ export default function Footer() {
 						</div>
 					</div>
 					<div className='footer__content'>
-						<p className='footer__whereyoucanfindus'>GDZIE NAZ ZNALEŹĆ</p>
+						<p className='footer__whereyoucanfindus'>GDZIE NAS ZNALEŹĆ</p>
 						<div className='googlephotomaps-wrapper'>
 							<iframe
 								src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.294484058614!2d14.5344405!3d53.4274427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa093cb92796d1%3A0x97a1ea3ad805fc7d!2siPhone%20Serwis%20Szczecin!5e0!3m2!1spl!2spl!4v1778332618187!5m2!1spl!2spl'
@@ -67,8 +67,7 @@ export default function Footer() {
 				</div>
 			</div>
 			<p className='footer__text'>
-				© 2026 APPLE-GSM | Serwis iPhone | Naprawa Telefonów i Laptopów | Skup
-				Złota i Lombard
+				© 2026 APPLE-GSM | Serwis iPhone | Naprawa Telefonów i Laptopów
 			</p>
 		</footer>
 	)

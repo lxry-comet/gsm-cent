@@ -1,0 +1,20 @@
+{
+  "usluga": "Wymiana baterii",
+  "cennik": [
+    {
+      "modele": "iPhone 8 - iPhone 11",
+      "cena": 200,
+      "waluta": "PLN"
+    },
+    {
+      "modele": "iPhone 12 - iPhone 15 (włącznie z 15)",
+      "cena": 300,
+      "waluta": "PLN"
+    },
+    {
+      "modele": "iPhone 16 - iPhone 17 Pro Max",
+      "cena": 390,
+      "waluta": "PLN"
+    }
+  ]
+}

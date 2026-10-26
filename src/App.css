@@ -183,3 +183,49 @@ a.numberButton:hover {
 		min-width: 300px;
 	}
 }
+/* ---------- Płynne pojawianie się przy wejściu na stronę ---------- */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+/* .App {
+  padding-top: 90px;
+} */
+.App > header,
+.App > section {
+	animation: fadeInUp 0.9s ease-out both;
+}
+
+.App > section:nth-of-type(2) { animation-delay: 0.1s; }
+.App > section:nth-of-type(3) { animation-delay: 0.2s; }
+.App > section:nth-of-type(4) { animation-delay: 0.3s; }
+.App > section:nth-of-type(5) { animation-delay: 0.4s; }
+
+/* ---------- Klasa pod pojawianie się przy scrollowaniu (patrz niżej) ---------- */
+.reveal {
+	opacity: 0;
+	transform: translateY(32px);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal--visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.App > header,
+	.App > section,
+	.reveal {
+		animation: none !important;
+		transition: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}

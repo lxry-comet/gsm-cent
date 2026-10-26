@@ -1,78 +1,103 @@
+
 import { Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+
 import Gallery from '../Gallery/Gallery.jsx'
+import imagesData from '../json/images.json'
+import servicesData from '../json/services.json'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
-import imagesData from '../json/images.json'
-import servicesData from '../json/services.json'
 import './Services.css'
 
-export default function Servis() {
-	return (
-		<section className='services'>
-			<Swiper
-				modules={[Navigation, Autoplay]}
-				spaceBetween={0}
-				slidesPerView={1}
-				navigation
-				pagination={{ clickable: false }}
-				autoplay={{ delay: 5000 }}
-				loop={true}
-				className='services__slider'
-			>
-				{servicesData.uslugi_serwisowe.map((category, index) => {
-					const imageUrl =
-						category.image ||
-						(imagesData.actualImages &&
-							imagesData.actualImages[
-								index % imagesData.actualImages.length
-							]) ||
-						'https://via.placeholder.com/1200x600'
+export default function Services() {
+  const categories = servicesData.uslugi_serwisowe ?? []
+  const images = imagesData.actualImages ?? []
 
-					return (
-						<SwiperSlide key={index}>
-							<div
-								className='service-slide'
-								style={{
-									backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${imageUrl})`
-								}}
-							>
-                <h3 className='slide__title'>{category.kategoria}</h3>
-								<div className='container slide__content'>
-									
-									<ul className='slide__list'>
-										{category.lista.map((item, itemIndex) => (
-											<li key={itemIndex} className='slide__item'>
-												{item}
-											</li>
-										))}
-									</ul>
-								</div>
-							</div>
-						</SwiperSlide>
-					)
-				})}
-			</Swiper>
+  return (
+    <main className="services">
+      <header className="services__intro">
+        <h1 className="services__title">
+          Usługi serwisu telefonów w Szczecinie
+        </h1>
 
-			<div className='container__services'>
-				{servicesData.uslugi_serwisowe.map((category, index) => (
-					<div key={index} className='services__category'>
-						<h3 className='services__category-title'>{category.kategoria}</h3>
-						<ul className='services__category-list'>
-							{category.lista.map((item, itemIndex) => (
-								<li key={itemIndex} className='services__category-item'>
-									{item}
-								</li>
-							))}
-						</ul>
-					</div>
-				))}
-			</div>
+        <p className="services__description">
+          Sprawdź zakres usług serwisowych, diagnostyki i pomocy
+          z oprogramowaniem. Skontaktuj się z nami, aby potwierdzić
+          możliwość naprawy konkretnego urządzenia.
+        </p>
+      </header>
 
-			<Gallery />
-		</section>
-	)
+      {categories.length > 0 && (
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          navigation
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+          }}
+          loop={categories.length > 1}
+          className="services__slider"
+        >
+          {categories.map((category, index) => {
+            const imageUrl =
+              category.image || images[index % (images.length || 1)]
+
+            return (
+              <SwiperSlide key={category.kategoria}>
+                <div
+                  className="service-slide"
+                  style={
+                    imageUrl
+                      ? {
+                          backgroundImage: `linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("${imageUrl}")`,
+                        }
+                      : undefined
+                  }
+                >
+                  <h2 className="slide__title">
+                    {category.kategoria}
+                  </h2>
+
+                  <ul className="slide__list">
+                    {category.lista.map((item) => (
+                      <li key={item} className="slide__item">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
+      )}
+
+      <div className="container__services">
+        {categories.map((category) => (
+          <section
+            key={category.kategoria}
+            className="services__category"
+          >
+            <h2 className="services__category-title">
+              {category.kategoria}
+            </h2>
+
+            <ul className="services__category-list">
+              {category.lista.map((item) => (
+                <li key={item} className="services__category-item">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <Gallery />
+    </main>
+  )
 }
