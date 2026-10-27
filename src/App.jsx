@@ -67,14 +67,15 @@ export default function App() {
                 <>
                   <Helmet>
                     <title>{metadata.title}</title>
-                    <meta
-                      name="description"
-                      content={metadata.description}
-                    />
-                    <link
-                      rel="canonical"
-                      href={`https://apple-gsm.pl${path}`}
-                    />
+                    <meta name="description" content={metadata.description} />
+                    <link rel="canonical" href={`https://apple-gsm.pl${path === '/' ? '/' : path}`} />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:locale" content="pl_PL" />
+                    <meta property="og:site_name" content="Apple GSM" />
+                    <meta property="og:title" content={metadata.title} />
+                    <meta property="og:description" content={metadata.description} />
+                    <meta property="og:url" content={`https://apple-gsm.pl${path}`} />
+                    <meta property="og:image" content="https://apple-gsm.pl/images/servis.webp" />
                   </Helmet>
 
                   {path === '/' && (
